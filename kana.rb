@@ -13,8 +13,6 @@ ra ri ru re ro
 wa wo
 n).join(" ").split(" ")
 
-puts ROMAJI.inspect
-
 HIRAGANA = %w(
 あいうえお
 かきくけこ
@@ -41,17 +39,16 @@ KATAKANA = %w(
 ワヲ
 ン).join("").split("")
 
-playing = true
-@kata = @hira = true
-@score = 0
-@count = 0
+playing = @kata = @hira = true
+@score = @count = 0
 
 puts "Welcome to the Kana Kuiz (I'm so clever).",""
 puts "Usage:"
 puts "  kata\t\tonly shows katakana",
      "  hira\t\tonly shows hiragana",
      "  kana\t\tshows both (default)",""
-puts "  reset\t\treset the score (you cheater...)",
+puts "  score\t\tshows you your current score",
+     "  reset\t\treset the score (you cheater...)",
      "  quit\t\texits game",
      "  exit\t\talias for quit",""
 puts "That is all, good luck. Oh, and try to get the kanas right.",""
@@ -97,7 +94,7 @@ while (playing) do
     @kata = @hira = true
     puts "Both on"
   when "score"
-    puts "You currently have: #{@score} points"
+    puts "You currently have: #{@score} points after answering #{@count} questions."
   when "reset"
     puts "Oops, you're terrible at this aren't you. Game reset."
     @score = @count = 0
