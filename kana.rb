@@ -52,7 +52,7 @@ puts "  kata\t\tonly shows katakana",
      "  hira\t\tonly shows hiragana",
      "  kana\t\tshows both (default)",""
 puts "  reset\t\treset the score (you cheater...)",
-     "  quit\t\texits game"
+     "  quit\t\texits game",
      "  exit\t\talias for quit",""
 puts "That is all, good luck. Oh, and try to get the kanas right.",""
 
