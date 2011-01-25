@@ -52,7 +52,8 @@ puts "  kata\t\tonly shows katakana",
      "  hira\t\tonly shows hiragana",
      "  kana\t\tshows both (default)",""
 puts "  reset\t\treset the score (you cheater...)",
-     "  quit\t\texits game",""
+     "  quit\t\texits game"
+     "  exit\t\talias for quit",""
 puts "That is all, good luck. Oh, and try to get the kanas right.",""
 
 def check_answer(input)
@@ -82,6 +83,8 @@ while (playing) do
   case (input = gets.chomp)
   when "quit"
     playing = false
+  when "exit"
+    playing = false
   when "kata"
     @kata = true
     @hira = false
@@ -96,6 +99,7 @@ while (playing) do
   when "score"
     puts "You currently have: #{@score} points"
   when "reset"
+    puts "Oops, you're terrible at this aren't you. Game reset."
     @score = @count = 0
   else
     check_answer(input)
