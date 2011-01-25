@@ -12,6 +12,6 @@ usage:
 ### Kana
 Learn you some good kanas. Little game to memorize katakana/hiragana
 
-usage:
-> $ ruby kana.rb
-  and read the instructions
+> usage:  
+>> $ ruby kana.rb  
+>  and read the instructions
