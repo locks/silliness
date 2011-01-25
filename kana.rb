@@ -50,8 +50,9 @@ puts "Welcome to the Kana Kuiz (I'm so clever).",""
 puts "Usage:"
 puts "  kata\t\tonly shows katakana",
      "  hira\t\tonly shows hiragana",
-     "  kana\t\tshows both",""
-puts "  exit\t\texits game (default)",""
+     "  kana\t\tshows both (default)",""
+puts "  reset\t\treset the score (you cheater...)",
+     "  quit\t\texits game",""
 puts "That is all, good luck. Oh, and try to get the kanas right.",""
 
 def check_answer(input)
@@ -70,15 +71,16 @@ def check_answer(input)
 
   if (input == ROMAJI[roma])
     @score += 1
-    puts "Yay! #{@score}/#{@count} right so far"
+    puts "(#{@score}/#{@count}) Yay, on the money!"
   else
-    puts "Oh no, you missed it. It was #{ROMAJI[roma]}"
+    puts "(#{@score}/#{@count}) Oh no, you missed it. It was #{ROMAJI[roma]}"
   end
 end
 
 while (playing) do
+  print "> "
   case (input = gets.chomp)
-  when "exit"
+  when "quit"
     playing = false
   when "kata"
     @kata = true
@@ -93,6 +95,8 @@ while (playing) do
     puts "Both on"
   when "score"
     puts "You currently have: #{@score} points"
+  when "reset"
+    @score = @count = 0
   else
     check_answer(input)
   end
