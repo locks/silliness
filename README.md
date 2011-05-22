@@ -14,3 +14,9 @@ Learn you some good kanas. Little game to memorize katakana/hiragana
 
 usage:  
 > $ ruby kana.rb  
+
+### PigLatin
+Here comes the ultimate cypher! Never again will your enemies uncover your darkest secrets
+
+usage:
+> $ ruby piglatin &lt;encode | decode&gt; &lt;what you want to cypherize&gt;
